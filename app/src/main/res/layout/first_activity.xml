@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ethan2"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:padding="16dp"
+        android:text="Welcome to Memer - Know your MEMES!"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="32sp"
+        android:textStyle="italic|bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:onClick="goToSecondActivity" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hello"
+        android:layout_centerInParent="true"
+        android:fontFamily="monospace"
+        android:padding="16dp"
+        android:text="Tap wherever to continue"
+        android:textAlignment="center"
+        android:textColor="#f44641"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

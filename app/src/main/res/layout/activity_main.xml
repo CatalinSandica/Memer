@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient"
+        android:orientation="vertical"
+        tools:context="com.example.android.memequiz.MainActivity">
+
+
+        <ImageView
+            android:id="@+id/imgMeme"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sad_frog" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:text="1. How is the meme above known? "
+                    android:textColor="#ffffff"
+                    android:textSize="22sp" />
+
+                <CheckBox
+                    android:id="@+id/chk1_frog"
+                    style="@style/CheckboxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="16dp"
+                    android:text="A. Sad Frog"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/chk_crying"
+                    style="@style/CheckboxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="16dp"
+                    android:text="B. Crying Pepe"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/chk_feelsbad"
+                    style="@style/CheckboxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="16dp"
+                    android:text="C. FeelsBadMan"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/chk_pepe"
+                    style="@style/CheckboxStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:paddingLeft="16dp"
+                    android:text="D. Sad Pepe"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:onClick="submitFirstQuestion"
+                    android:text="Next" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:text="1. What meme has its beginnings in Black Twitter series? "
+                    android:textColor="#ffffff"
+                    android:textSize="22sp" />
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioHot"
+                        style="@style/CheckboxStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:paddingLeft="16dp"
+                        android:text="A. Mans Not Hot"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioRoll"
+                        style="@style/CheckboxStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:paddingLeft="16dp"
+                        android:text="B. Roll Safe / Be smart"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioImposs"
+                        style="@style/CheckboxStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:paddingLeft="16dp"
+                        android:text="C. Impossibru"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioSteve"
+                        style="@style/CheckboxStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:paddingLeft="16dp"
+                        android:text="D. Scumbag Steve"
+                        android:textSize="18sp" />
+                </RadioGroup>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:onClick="submitSecondQuestion"
+                    android:text="Next" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:text="1. What is the name of the meme above? "
+                    android:textColor="#ffffff"
+                    android:textSize="22sp" />
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioInternet"
+                        style="@style/CheckboxStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:paddingLeft="16dp"
+                        android:text="A. Internet Rules"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioVendetta"
+                        style="@style/CheckboxStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:paddingLeft="16dp"
+                        android:text="B. V from Vendetta"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioMasks"
+                        style="@style/CheckboxStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:paddingLeft="16dp"
+                        android:text="C. Masks"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioSocial"
+                        style="@style/CheckboxStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:paddingLeft="16dp"
+                        android:text="D. Socializing"
+                        android:textSize="18sp" />
+                </RadioGroup>
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:onClick="submitThirdQuestion"
+                    android:text="Next" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:text="1. Is this Birthday Dog meme? "
+                    android:textColor="#ffffff"
+                    android:textSize="22sp" />
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioTrue"
+                        style="@style/CheckboxStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:paddingLeft="16dp"
+                        android:text="A. True"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioFalse"
+                        style="@style/CheckboxStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:paddingLeft="16dp"
+                        android:text="B. False"
+                        android:textSize="18sp" />
+                </RadioGroup>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:onClick="submitForthQuestion"
+                    android:text="Next" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:text="1. Please fill the name of the meme... "
+                    android:textColor="#ffffff"
+                    android:textSize="22sp" />
+
+                <EditText
+                    android:id="@+id/txtMemeName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="#ffffff"
+                    android:hint="Type name..."
+                    android:maxLines="1"
+                    android:paddingTop="8dp"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff"
+                    android:textSize="18sp"
+                    android:inputType="text"
+                    android:singleLine="true"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:onClick="submitResult"
+                    android:text="Submit" />
+
+            </LinearLayout>
+
+            <include layout="@layout/confirmation_layout" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>
